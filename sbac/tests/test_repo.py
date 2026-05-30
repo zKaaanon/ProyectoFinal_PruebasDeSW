@@ -86,6 +86,7 @@ def test_cmd_add_archivo_inexistente_lanza_systemexit(repo_dir, capsys):
 def test_cmd_add_archivo_inexistente_muestra_error(repo_dir, capsys):
     """CP-004: add con archivo inexistente imprime un mensaje con prefijo 'Error:'."""
     cmd_init()
+    capsys.readouterr() 
 
     with pytest.raises(SystemExit):
         cmd_add("fantasma.txt")

@@ -20,12 +20,12 @@ def repo_con_dos_versiones(tmp_path, monkeypatch):
     archivo = tmp_path / "archivo_prueba.txt"
 
     # v1: contenido inicial
-    archivo.write_text("Línea 1\nLínea 2\nLínea 3\n")
+    archivo.write_text("Línea 1\nLínea 2\nLínea 3\n", encoding="utf-8")
     stage_file("archivo_prueba.txt")
     create_commit("Primera versión")
 
     # v2: contenido modificado
-    archivo.write_text("Línea 1\nLínea 2 MODIFICADA\nLínea 3\nLínea 4 nueva\n")
+    archivo.write_text("Línea 1\nLínea 2 MODIFICADA\nLínea 3\nLínea 4 nueva\n", encoding="utf-8")
     stage_file("archivo_prueba.txt")
     create_commit("Segunda versión")
 
@@ -42,7 +42,7 @@ def repo_con_versiones_identicas(tmp_path, monkeypatch):
     init_repo()
 
     archivo = tmp_path / "archivo_prueba.txt"
-    archivo.write_text("Línea 1\nLínea 2\n")
+    archivo.write_text("Línea 1\nLínea 2\n", encoding="utf-8")
 
     stage_file("archivo_prueba.txt")
     create_commit("Primera versión")
@@ -60,7 +60,7 @@ def repo_con_un_commit(tmp_path, monkeypatch):
     init_repo()
 
     archivo = tmp_path / "archivo_prueba.txt"
-    archivo.write_text("Contenido base\n")
+    archivo.write_text("Contenido base\n", encoding="utf-8")
     stage_file("archivo_prueba.txt")
     create_commit("Primera versión")
 
