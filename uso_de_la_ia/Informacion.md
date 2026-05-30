@@ -106,7 +106,7 @@ REGLAS DE ESTILO:
 ### PROMPT A: repo.py (init, add, status)
 
 ```
-Usando el contexto del proyecto SBAC (ver arriba), implementa el archivo repo.py.
+Usando el contexto del proyecto SBAC, implementa el archivo repo.py.
 
 Este módulo maneja los comandos de gestión de repositorio: init, add y status.
 Importa únicamente desde storage.py — no escribe JSON directamente.
@@ -331,8 +331,8 @@ Incluir bloque:
 ### PROMPT F: tests/ (pytest)
 
 ```
-Usando el contexto del proyecto SBAC (ver arriba), implementa las pruebas unitarias
-con pytest para el archivo [NOMBRE_MÓDULO].py.
+Usando el contexto del proyecto SBAC, implementa las pruebas unitarias
+con pytest para el archivo repo.py.
 
 Las pruebas corresponden a los casos de prueba del estándar IEEE 829 ya definidos.
 Cada función de prueba valida UN caso de prueba específico.
